@@ -37,13 +37,24 @@ def video_downloader(url):
         print(f"\nAn unexpected error occurred: {e}")
 
 if __name__ == "__main__":
-    print("###### Video Downloader by JYPH ######\nA simple script designed to download videos using yt_dlp.\n")
-    
-    if len(sys.argv) > 1:
-        video_url = sys.argv[1]
-    else:
-        video_url = input("Enter video URL to download: ")
+    print("###### Video Downloader by JYPH ######")
+    print("A simple script designed to download videos using yt_dlp.\n")
 
-    video_downloader(video_url)
+    while True:
+        video_url = input("Enter video URL to download (or type 'quit' to exit): ")
 
-    # Add more content here later for error handling later
+        if video_url.lower() in ['quit', 'exit']:
+            print("Exiting downloader. Goodbye!")
+
+        if not video_url.strip():
+            print("URL cannot be empty. Please enter a URL.")
+
+        success = video_downloader(video_url)
+
+        if success:
+            another = input("\nDownload another video? (yes/no): ").lower()
+            if another not in ['yes', 'y']:
+                print("Exiting downloader. Goodbye!")
+                break 
+        else:
+            print("\nPlease try a different URL or type 'quit' to exit.")
