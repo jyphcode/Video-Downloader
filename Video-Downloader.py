@@ -55,6 +55,4 @@ if __name__ == "__main__":
             another = input("\nDownload another video? (yes/no): ").lower()
             if another not in ['yes', 'y']:
                 print("Exiting downloader. Goodbye!")
-                break 
-        else:
-            print("\nPlease try a different URL or type 'quit' to exit.")
+                break
