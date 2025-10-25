@@ -21,6 +21,10 @@ def video_downloader(url):
         'format': 'best',
         'outtmpl': '%(title)s.%(ext)s', 
         'noplaylist': True, 
+        # This uses a HTTP header to attempt to trick web browsers
+        'http_headers': {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36',
+        },
     }
 
     print(f"Attempting to download video from: {url}")
