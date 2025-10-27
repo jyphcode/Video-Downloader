@@ -2,8 +2,8 @@
 This is a simple script designed to download videos using yt-dlp.
 
 Things to fix: 
-1.) more video support
-2.) error handling in case invalid site (atm, it crashes)
+1.) more video support (need more testing)
+2.) error when video requires login (ex. age restricted)
 3.) add ability download with different settings (atm, only has best quality available)
 
 notes:
