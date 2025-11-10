@@ -1,5 +1,5 @@
 # Simple Video Downloader
-# Author: JYPH
+# Author: Joe
 # Date: 10/14/2025
 #
 # Description: 
