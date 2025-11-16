@@ -6,8 +6,7 @@
 # This is a simple script designed to download videos using yt_dlp. The script should
 # request a link, then download the video onto the folder in which the script
 # is located. Since this is limited to the yt_dlp library, only sites similar to YouTube
-# can be downloaded. I plan to mess around and see if I can add additional
-# website support in the future.
+# can be downloaded.
 #
 # NOTE: To run this code, you must have yt-dlp installed. You can install this with the
 # command: pip install yt-dlp or pip install --user yt-dlp (if permissions is an issue)
@@ -36,12 +35,12 @@ def video_downloader(url):
 
     except yt_dlp.utils.DownloadError as e:
         print(f"\nAn error occurred during download: {e}")
-        print("Check URL and internet connection.")
+        print("Check Permissions, URL, and internet connection.")
     except Exception as e:
         print(f"\nAn unexpected error occurred: {e}")
 
 if __name__ == "__main__":
-    print("###### Video Downloader by JYPH ######")
+    print("###### Video Downloader by Joe ######")
     print("A simple script designed to download videos using yt_dlp.\n")
 
     while True:
